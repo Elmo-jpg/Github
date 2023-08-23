@@ -1,0 +1,17 @@
+package game;
+import javax.swing.*;
+
+public class testbeta extends JFrame {
+
+	public static void main(String[] args) {
+		JFrame frame = new JFrame ("Swing Application");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize (400, 300);
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);
+		
+		
+
+	}
+
+}
