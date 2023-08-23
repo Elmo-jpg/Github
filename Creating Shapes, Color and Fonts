@@ -1,0 +1,97 @@
+package game;
+import javax.swing.*;
+import java.awt.*;
+public class testbeta extends JPanel {
+	// import necessary classes: import javax.swing.*; and import java.awt.*
+	// Define the testBeta class: public class TESTBETA and extends JPANEL
+	
+	
+	    public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		// drawing code
+		// override the paintComponent method: public void paintComponent(Graphics g) 
+        //super.paintComponent(g);
+		
+		Graphics2D	g2d= (Graphics2D) g;
+		// Main class is test beta
+		// sub class is (super) super.paintComponent
+		// variable is (g)
+		
+		setBackground(Color.LIGHT_GRAY);
+		
+		g2d.setColor(Color.BLUE);
+		g2d.drawRect(50, 50, 150, 100);
+		 
+		g2d.setColor(Color.RED);
+		g2d.fillRect(50, 50, 150, 100);
+		// (g) can pass or utilize to g2d
+	    // g2d call to set color and drawing and fill the shapes 
+		
+		
+		
+		//========= ANOTHER EXAMPLES TO OTHER GRAPHICS2D!!!======= 
+		     //public void paintComponent(Graphics g) {
+		     //super.paintComponent(g);
+		     //Graphics2D	g2d= (Graphics2D) g;
+		//GradientPaint gradient = new GradientPaint(350, 50, Color.GREEN, 450,  100, Color.YELLOW);
+		//Graphics2D g2d= (Graphics2D)g;
+		//g2d.setPaint(gradient);
+		//g2d.fillRect(350, 50, 100, 50);
+		///Combination of color green and yellow ---------------
+		
+		
+		//========= ANOTHER EXAMPLES TO OTHER GRAPHICS2D!!!======= 
+		      //protected void paintComponent(Graphics g) {
+			  //super.paintComponent(g);
+			  //Graphics2D	g2d= (Graphics2D) g;
+		//g2d.setColor(Color.BLUE);
+		//g2d.drawOval(50, 50, 150, 100);
+		//g2d.setColor(Color.RED);
+		//g2d.fillOval(250, 50, 100, 150);----
+		
+		//========= ANOTHER EXAMPLES of TEXTS!!!======= 
+	         //protected void paintComponent(Graphics g) {
+		     //super.paintComponent(g);
+		     
+		//setBackground(Color.WHITE);
+		//g.setColor(Color.BLUE);
+		//g.DrawString("Hello, World", 50, 50);
+		//Font customFont = new Font ("Arial", Font.BOLD, 20);
+		//g.setFont(CustomFont);
+		
+		//g.setColor(Color.BLUE);
+		//g.DrawString("Custom Font", 50, 100);------
+	}
+	
+	    
+	public static void main(String[] args) {
+		JFrame frame = new JFrame ("Line Drawing Example");
+		//---frame setup ---
+		frame.setVisible(true); 
+		frame.setSize(300, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setResizable (false);
+		testbeta panel = new testbeta();
+		frame.add(panel);
+		//---Create an instance of the TestBeta class and add it to the frame:
+		frame.setLocationRelativeTo(null);
+		// center the frame on the screen:
+		
+		
+		
+		 
+ 
+		
+	
+		
+	
+		
+		
+		
+		
+		
+		
+
+	}
+
+}
