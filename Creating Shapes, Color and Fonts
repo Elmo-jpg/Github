@@ -41,7 +41,7 @@ public class testbeta extends JPanel {
 		
 		
 		//========= ANOTHER EXAMPLES TO OTHER GRAPHICS2D!!!======= 
-		      //protected void paintComponent(Graphics g) {
+		          //protected void paintComponent(Graphics g) {
 			  //super.paintComponent(g);
 			  //Graphics2D	g2d= (Graphics2D) g;
 		//g2d.setColor(Color.BLUE);
@@ -50,7 +50,7 @@ public class testbeta extends JPanel {
 		//g2d.fillOval(250, 50, 100, 150);----
 		
 		//========= ANOTHER EXAMPLES of TEXTS!!!======= 
-	         //protected void paintComponent(Graphics g) {
+	             //protected void paintComponent(Graphics g) {
 		     //super.paintComponent(g);
 		     
 		//setBackground(Color.WHITE);
@@ -76,22 +76,3 @@ public class testbeta extends JPanel {
 		//---Create an instance of the TestBeta class and add it to the frame:
 		frame.setLocationRelativeTo(null);
 		// center the frame on the screen:
-		
-		
-		
-		 
- 
-		
-	
-		
-	
-		
-		
-		
-		
-		
-		
-
-	}
-
-}
