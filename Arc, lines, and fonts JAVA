@@ -1,0 +1,86 @@
+package game;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+
+public class testbeta extends JPanel {
+	//lines
+	
+	
+	    public void paintComponent(Graphics g) 
+	    {
+	    g.setColor(Color.BLACK);
+	    g.drawRect(50, 20, 100, 200);
+	    g.drawOval(160, 20, 100, 200);
+	    g.drawArc(270, 20, 100 , 200, 50, 300);
+	    g.setColor(Color.BLUE);
+	    g.fillArc(210, 280, 150, 150, 45, 90);
+	    	
+	    	
+	    }
+		public static void main(String[] args) {
+			
+			
+	   
+				JFrame win = new JFrame ("Graphics Demo Font and Lines");
+				
+				win.setVisible(true); 
+				win.setSize(800, 600);
+				win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				testbeta hello = new testbeta ();
+				win.add (hello);
+				win.setVisible(true);
+		}		
+  }
+
+//===========================================================================================FONTS EXAMPLE=====================================================================================//
+package game;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class testbeta extends JPanel  {
+	//lines
+	public void paint(Graphics g)
+	{
+    
+		g.setColor(Color.GREEN);
+		g.drawLine(10, 100, 400, 100);
+		
+		g.setColor(Color.BLUE);
+		g.drawLine(50, 150, 100, 180);
+		
+		g.setColor(Color.MAGENTA);
+		g.drawLine(100, 350, 300, 230);
+		
+		g.setColor(Color.PINK);
+		g.drawString("Hello BSIT 1B", 500, 100);
+		
+		g.setFont(new Font ("Consolas", Font.PLAIN, 36) );
+		g.drawString("Welcome to 2nd year", 400, 360);
+		
+		g.setColor(Color.BLUE);
+		g.setFont(Font.decode("Calibri-BOLDITALIC-60"));
+	    g.drawString("GALINGAN MO!!", 290, 460);
+	    
+	    
+	}
+	public static void main(String[] args) {
+	JFrame win = new  JFrame ("Graphics Demo Font and Lines");
+	win.setSize(800, 600);
+	win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	testbeta hello = new testbeta();
+	win.add(hello);
+	win.setVisible(true);
+		
+	}
+	
+}	
+			
+	   
