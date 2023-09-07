@@ -1,0 +1,60 @@
+package rpggame;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class betatest  extends JPanel implements Mouselistener {
+
+
+	public betatest() {
+	 addMouseListener(this); /// Register the listener to the panel
+	}
+
+	protected void paintComponent(Graphics g) {
+	    super.paintComponent(g);
+	    g.drawString("Click or move the mouse over this panel", 50, 50);
+	}
+
+	/// MouseListener methods 
+	/// @override
+
+	public void mouseClicked(MouseEvent e){
+	      int x = e.getX();
+	      int y = e.getY();
+	      System.out.println("Mouse Clicked at (" + x + "," + y + ")");
+	}
+
+	public void mousePressed(MouseEvent e) {
+	    System.out.println("Mouse Press the panel");
+	}
+
+	public void mouseReleased(MouseEvent e) {
+	    System.out.println("Mouse Release the panel");
+	}
+
+	/// exit the panel or frame
+	public void mouseEntered(MouseEvent e) {
+	    System.out.println("Mouse Entered the panel");
+	}
+
+	/// exit the panel or frame
+	public void mouseExited(MouseEvent e) {
+	    System.out.println("Mouse Exited the panel");
+	}
+		  
+	public static void main(String[] args) {
+		 SwingUtilities.invokeLater(new Runnable() {
+			  public void run() {
+				  JFrame frame = new JFrame("Color and Gradiant Demo");
+				  frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				  frame.setSize(500, 200);
+				  frame.add(new betatest());
+				  frame.setVisible(true);
+			  }
+			  }
+	}
+	\
+
+	}
+
+}
