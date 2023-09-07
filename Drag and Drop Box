@@ -1,0 +1,94 @@
+package rpgame;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class betatest extends JPanel implements MouseListener, MouseMotionListener{
+	
+
+	private int boxX, boxY;
+	private int mouseX, mouseY;
+	private boolean dragging;
+	
+	public betatest() {
+		boxX = 150;
+		boxY = 150;
+		dragging = false;
+		
+		addMouseListener(this);
+		addMouseMotionListener(this);
+		}
+	
+	/// This method is called when the panel needs to be redrawn
+	
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		
+		// set the background color
+		setBackground(Color.WHITE);
+		
+		// Draw the box
+		g.setColor(Color.RED);
+		g.fillRect(boxX,  boxY, 50, 50);
+		
+	}
+	// MouseListener methods 
+	
+	public void mousePressed(MouseEvent e);
+	// Check if the mouse is inside the box
+	if (e.getX() >= boxX && e.getX() <= boxX + 50 && e.getY() >= boxY && e.getY() <= boxY + 50) {
+		dragging = true;
+		mouseX = e.getX();
+		mouseY = e.getY();
+	}
+}
+
+public void mouseReleased(MouseEvent e) {
+	dragging = false;
+}
+publick void mouseDragged(MouseEvent e) {
+	if(dragging) {
+		// Calculate the distance moved by the mouse
+		int dx = e.getX() - mouseX;
+		int dy = e.getY() - mouseY;
+		
+		/// Update the position of the box accordingly
+	boxX += dx;
+	boxY += dy;
+	
+	/// Update the current mouse position
+	mouseX = e.getX();
+	mouseY = e.getY();
+	
+	// Repaint the panel to update the box's position
+	repaint();
+	}
+}
+
+	
+	/// other MouseMotionListener methods (not used in this example)
+public void mouseMoved(MouseEvent e) {
+	// Not use in this example 
+}
+public void mouseEntered(MouseEvent e) {
+	// Not use in this example 
+}
+public void mouseExited(MouseEvent e) {
+	// Not use in this example 
+}
+
+public static void main(String[] args) {
+	SwingUtilities.invokeLater(new Runnable() {
+		public void run() {
+			JFrame frame = new JFrame("Move the Box Demo");
+			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			frame.setSize(500, 200);
+			frame.add(new betatest());
+			frame.setVisible(true);
+			
+		
+		}
+
+	});
+
+}
